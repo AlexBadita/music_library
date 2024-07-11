@@ -5,7 +5,7 @@ using MusicLibraryAPI.Services;
 namespace MusicLibraryAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ArtistsController : ControllerBase
     {
         ILibraryCollectionService _libraryCollectionService;

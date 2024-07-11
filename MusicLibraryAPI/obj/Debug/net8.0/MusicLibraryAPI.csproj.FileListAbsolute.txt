@@ -44,3 +44,4 @@
 /Users/alex/Desktop/projects/music_library/MusicLibraryAPI/obj/Debug/net8.0/MusicLibraryAPI.pdb
 /Users/alex/Desktop/projects/music_library/MusicLibraryAPI/obj/Debug/net8.0/MusicLibraryAPI.genruntimeconfig.cache
 /Users/alex/Desktop/projects/music_library/MusicLibraryAPI/obj/Debug/net8.0/ref/MusicLibraryAPI.dll
+/Users/alex/Desktop/projects/music_library/MusicLibraryAPI/obj/Debug/net8.0/MusicLibraryAPI.sourcelink.json
