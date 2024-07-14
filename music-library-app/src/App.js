@@ -1,9 +1,15 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { getData } from "./services/ApiService";
+import CardList from "./components/CardList";
+import SearchBar from "./components/SearchBar";
+import Home from "./pages/Home";
+import Albums from "./pages/Albums";
 
 function App() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -17,16 +23,24 @@ function App() {
     fetchData();
   }, []);
 
+  const filteredData = data.filter((artist) =>
+    artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Data from API</h1>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
-      </header>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route path="/albums">
+            <Albums />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      {/* <SearchBar onSearch={setSearchTerm} />
+      <CardList artists={filteredData} /> */}
     </div>
   );
 }
