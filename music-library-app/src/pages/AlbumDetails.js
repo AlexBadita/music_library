@@ -8,6 +8,7 @@ import Nav from "../components/Nav";
 const AlbumDetails = () => {
   const { id } = useParams();
   const [album, setAlbum] = useState(null);
+  const artistName = localStorage.getItem("artistName");
 
   useEffect(() => {
     const [artistId, albumIndex] = id.split("-");
@@ -37,6 +38,7 @@ const AlbumDetails = () => {
         <div className="album-info">
           <p className="title">Album</p>
           <h1 className="album-title">{album.title}</h1>
+          <h4 className="artist-name">By {artistName}</h4>
         </div>
       </div>
       <p className="album-description">{album.description}</p>

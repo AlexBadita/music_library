@@ -2,6 +2,7 @@
     display: flex;
     color: white;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .album-header {
@@ -33,12 +34,22 @@
     margin: 0;
 }
 
-.album-description {
+.artist-name {
     margin: 0;
+}
+
+.album-description {
+    margin: 0 0 20px;
+    text-align: justify;
 }
 
 .album-songs-header {
     display: grid;
-    grid-template-columns: 0.2fr 4fr 1fr;
-    border-bottom: #343436 2px solid;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    border-bottom: #83B4FF 2px solid;
+    padding: 5px;
+}
+
+.header-length {
+    justify-self: center;
 }

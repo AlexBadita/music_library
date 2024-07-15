@@ -1,4 +1,13 @@
 .song {
     display: grid;
-    grid-template-columns: 0.2fr 4fr 1fr;
+    grid-template-columns: 0.5fr 4fr 0.5fr;
+    padding: 5px;
+}
+
+.song-length {
+    justify-self: center;
+}
+
+.song:hover {
+    background-color: #5A72A0;
 }

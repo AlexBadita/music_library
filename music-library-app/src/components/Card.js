@@ -6,6 +6,7 @@ const Card = ({ id, image, albumName, artistName }) => {
   const navigate = useNavigate();
 
   const hadleCardClick = () => {
+    localStorage.setItem("artistName", artistName);
     navigate(`/album/${id}`);
   };
 
