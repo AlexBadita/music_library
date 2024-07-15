@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { getData } from "./services/ApiService";
 import Home from "./pages/Home";
-import Albums from "./pages/Albums";
+import AlbumDetails from "./pages/AlbumDetails";
 
 function App() {
   const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home data={data} />} />
-        <Route path="/albums" element={<Albums />} />
+        <Route path="/album/:id" element={<AlbumDetails />} />
       </Routes>
     </div>
   );

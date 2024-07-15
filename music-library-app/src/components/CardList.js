@@ -6,9 +6,10 @@ const CardList = ({ artists }) => {
   return (
     <div className="card-list">
       {artists.map((artist) =>
-        artist.albums.map((album) => (
+        artist.albums.map((album, index) => (
           <Card
-            key={artist.id}
+            key={`${artist.id}-${index}`}
+            id={`${artist.id}-${index}`}
             image={"https://placehold.co/400"}
             albumName={album.title}
             artistName={artist.name}

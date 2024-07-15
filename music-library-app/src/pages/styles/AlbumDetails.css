@@ -1,0 +1,45 @@
+.album-details {
+    display: flex;
+    color: white;
+    padding: 0 7%;
+    flex-direction: column;
+}
+
+.album-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.album-image {
+    width: 10vh;
+    height: 10vh;
+    margin: 20px 30px 0 0;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 80%;
+    height: 10vh;
+    justify-content: flex-end;
+}
+
+.title {
+    margin: 0;
+}
+
+.album-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.album-description {
+    margin: 0;
+}
+
+.album-songs-header {
+    display: grid;
+    grid-template-columns: 0.2fr 4fr 1fr;
+    border-bottom: #343436 2px solid;
+}
