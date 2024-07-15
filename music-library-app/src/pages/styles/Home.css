@@ -1,0 +1,9 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 0 7%;
+}
+
+.header {
+    color: white;
+}

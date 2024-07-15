@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles/SearchBar.css";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ placeholder }) => {
   return (
     <div className="search-bar">
       <input
         type="text"
         className="search-input"
-        placeholder="Search..."
-        onChange={(e) => onSearch(e.target.value)}
+        placeholder={`Search for ${placeholder}`}
+        // onChange={(e) => onSearch(e.target.value)}
       />
       <svg
         className="search-icon"
