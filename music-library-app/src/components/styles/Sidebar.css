@@ -12,7 +12,7 @@
     display: flex;
 }
 
-.sidebar-item a{
+.sidebar-link{
     background-color: #000;
     color: white;
     text-decoration: none;
@@ -20,7 +20,7 @@
     align-items: center;
     padding: 10px;
     border-radius: 4px;
-    margin-right: 10px;
+    margin-left: 10px;
     transition: background-color 0.3s;
 }
 
@@ -28,6 +28,6 @@
     margin-right: 5px;
 }
 
-.sidebar-item a:hover {
-    background-color: #555;
+.sidebar-item a:hover, .active {
+    background-color: #5A72A0;
 }

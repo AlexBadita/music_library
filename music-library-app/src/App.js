@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import AlbumDetails from "./pages/AlbumDetails";
 import Nav from "./components/Nav";
 import Admin from "./pages/Admin";
-import Sidebar from "./components/Sidebar";
 import Albums from "./pages/Albums";
 
 function App() {

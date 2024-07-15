@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
 import CardList from "../components/CardList";
+import "./styles/Albums.css";
 
 const Albums = ({ data }) => {
   return (

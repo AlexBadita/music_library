@@ -9,10 +9,10 @@ const Nav = () => {
   return (
     <div className="nav">
       <button className="nav-button back" onClick={() => navigate(-1)}>
-        <i class="fas fa-chevron-left"></i>
+        <i className="fas fa-chevron-left"></i>
       </button>
       <button className="nav-button forward" onClick={() => navigate(1)}>
-        <i class="fas fa-chevron-right"></i>
+        <i className="fas fa-chevron-right"></i>
       </button>
       <Sidebar />
     </div>

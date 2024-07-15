@@ -5,7 +5,7 @@
 }
 
 .nav-button {
-    background-color: #000;
+    background-color: black;
     border: none;
     color: white;
     width: 5vh;
@@ -20,7 +20,7 @@
 }
 
 .nav-button:hover {
-    background-color: #555;
+    background-color: #5A72A0;
 }
 
 .nav-button i {

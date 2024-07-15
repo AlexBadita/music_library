@@ -1,33 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation, NavLink } from "react-router-dom";
 import "./styles/Sidebar.css";
 
 const Sidebar = ({ isLogged, isAdmin }) => {
   return (
     <nav className="sidebar">
       <ul className="sidebar-buttons">
-        <li className="sidebar-item">
-          <a href="/">
+        <NavLink to="/" activeClassName="active" className="sidebar-link">
+          <li className="sidebar-item">
             <i className="fa fa-home"></i> Home
-          </a>
-        </li>
-        <li className="sidebar-item">
-          <a href="/albums">
+          </li>
+        </NavLink>
+        <NavLink to="/albums" activeClassName="active" className="sidebar-link">
+          <li className="sidebar-item">
             <i className="fa fa-record-vinyl"></i> Albums
-          </a>
-        </li>
-        <li className="sidebar-item">
-          <a href="/">
+          </li>
+        </NavLink>
+        <NavLink
+          to="/artists"
+          activeClassName="active"
+          className="sidebar-link"
+        >
+          <li className="sidebar-item">
             <i className="fa fa-microphone"></i> Artists
-          </a>
-        </li>
-        <li className="sidebar-item">
-          <a href="/">
+          </li>
+        </NavLink>
+        <NavLink to="/songs" activeClassName="active" className="sidebar-link">
+          <li className="sidebar-item">
             <i className="fa fa-music"></i> Songs
-          </a>
-        </li>
-        <li className="sidebar-item">
-          <a href="/">Login</a>
-        </li>
+          </li>
+        </NavLink>
+        <li className="sidebar-item sidebar-link">Login</li>
       </ul>
       {isLogged ? (
         isAdmin ? (

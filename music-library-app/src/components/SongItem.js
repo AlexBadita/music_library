@@ -4,7 +4,7 @@ import "./styles/SongItem.css";
 const SongItem = ({ index, name, length }) => {
   return (
     <div className="song">
-      <p className="song-index">{index}</p>
+      <p className="song-index">{index + 1}</p>
       <p className="song-name">{name}</p>
       <p className="song-length">{length}</p>
     </div>
