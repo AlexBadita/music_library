@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { getData } from "./services/ApiService";
 import Home from "./pages/Home";
 import AlbumDetails from "./pages/AlbumDetails";
+import Nav from "./components/Nav";
 
 function App() {
   const [data, setData] = useState([]);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/album/:id" element={<AlbumDetails />} />

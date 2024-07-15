@@ -1,7 +1,6 @@
 .album-details {
     display: flex;
     color: white;
-    padding: 0 7%;
     flex-direction: column;
 }
 
