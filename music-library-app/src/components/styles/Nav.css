@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: #000;
+    border: none;
+    color: white;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+.nav-button i {
+    font-size: 16px;
+}

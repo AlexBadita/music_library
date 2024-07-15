@@ -1,8 +1,5 @@
 .home {
     display: flex;
     flex-direction: column;
-}
-
-.header {
-    color: white;
+    height: 100vh;
 }

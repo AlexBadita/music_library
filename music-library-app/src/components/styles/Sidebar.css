@@ -1,0 +1,33 @@
+.sidebar {
+    color: white;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: end;
+}
+
+.sidebar-buttons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar-item a{
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item i {
+    margin-right: 5px;
+}
+
+.sidebar-item a:hover {
+    background-color: #555;
+}
