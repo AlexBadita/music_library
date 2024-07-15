@@ -30,6 +30,7 @@ function App() {
         <Route path="/" element={<Home data={data} />} />
         <Route path="/albums" element={<Albums data={data} />} />
         <Route path="/album/:id" element={<AlbumDetails />} />
+        {/* <Route path="/artists" element={Artists} */}
         <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>

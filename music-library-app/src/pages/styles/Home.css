@@ -23,3 +23,7 @@
 .songs-item:hover {
     background-color: #5A72A0;
 }
+
+.no-result {
+    margin-top: 10px;
+}

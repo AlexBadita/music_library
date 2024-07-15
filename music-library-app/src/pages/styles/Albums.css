@@ -1,3 +1,7 @@
 .albums {
     color: #fff;
 }
+
+.no-result {
+    margin-top: 10px;
+}
