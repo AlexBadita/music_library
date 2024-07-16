@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace MusicLibraryAPI.Models
@@ -7,7 +6,7 @@ namespace MusicLibraryAPI.Models
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }

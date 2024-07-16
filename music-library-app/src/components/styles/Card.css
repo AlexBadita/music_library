@@ -13,15 +13,22 @@
 
 .card-album {
     font-size: 16px;
-    margin: 10px 0 5px 10px;
+    margin: 10px 10px 5px 10px;
     color: white;
 }
 
 .card-artist {
-    margin: 5px 0 10px 10px;
+    margin: 5px 10px 10px 10px;
     color: #ccc;
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.card-album,
+.card-artist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

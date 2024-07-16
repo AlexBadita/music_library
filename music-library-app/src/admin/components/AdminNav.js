@@ -6,13 +6,21 @@ const AdminNav = () => {
   return (
     <div className="nav">
       <ul className="nav-buttons">
-        <NavLink to="/admin" className="nav-link">
+        <NavLink to="/admin/home" activeclassname="active" className="nav-link">
           <li className="nav-item">Home</li>
         </NavLink>
-        <NavLink to="/admin/artists" className="nav-link">
+        <NavLink
+          to="/admin/artists"
+          activeclassname="active"
+          className="nav-link"
+        >
           <li className="nav-item">Artists</li>
         </NavLink>
-        <NavLink to="/admin/albums" className="nav-link">
+        <NavLink
+          to="/admin/albums"
+          activeclassname="active"
+          className="nav-link"
+        >
           <li className="nav-item">Albums</li>
         </NavLink>
       </ul>

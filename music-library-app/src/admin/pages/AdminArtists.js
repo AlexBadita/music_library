@@ -151,14 +151,14 @@ const AdminArtists = () => {
         <p>Delete</p>
       </div>
       {filteredData.length > 0 ? (
-        filteredData.map((artist, index) => (
-          <div className="artists-item" key={index}>
-            <p>{index + 1}</p>
-            {editData && editData.id === artist.id ? (
+        filteredData.map((artist, index) =>
+          editData && editData.id === artist.id ? (
+            <div key={index}>
               <form
                 onSubmit={() => handleEditSubmit(editData.id)}
-                className="edit-form"
+                className="artists-item"
               >
+                <p>{index + 1}</p>
                 <input
                   type="text"
                   name="name"
@@ -169,18 +169,24 @@ const AdminArtists = () => {
                 <button className="form-button" type="submit">
                   Update
                 </button>
+                <p onClick={() => handleDelete(artist.id)}>
+                  <i className="fa fa-trash"></i>
+                </p>
               </form>
-            ) : (
+            </div>
+          ) : (
+            <div className="artists-item" key={index}>
+              <p>{index + 1}</p>
               <p>{artist.name}</p>
-            )}
-            <p onClick={() => setEditData(artist)}>
-              <i className="fa fa-pen"></i>
-            </p>
-            <p onClick={() => handleDelete(artist.id)}>
-              <i className="fa fa-trash"></i>
-            </p>
-          </div>
-        ))
+              <p onClick={() => setEditData(artist)}>
+                <i className="fa fa-pen"></i>
+              </p>
+              <p onClick={() => handleDelete(artist.id)}>
+                <i className="fa fa-trash"></i>
+              </p>
+            </div>
+          )
+        )
       ) : (
         <div className="no-result">No results found!</div>
       )}

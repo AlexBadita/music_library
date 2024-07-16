@@ -24,6 +24,6 @@
     transition: background-color 0.3s;
 }
 
-.nav-link:hover{
+.nav-link:hover, .active{
     background-color: #5A72A0;
 }

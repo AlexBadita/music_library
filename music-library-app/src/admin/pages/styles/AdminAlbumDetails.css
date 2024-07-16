@@ -1,0 +1,35 @@
+.form-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.album-songs-header, .song {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+    padding: 5px;
+    align-items: center;
+    gap: 20px;
+}
+
+.album-songs-header{
+    border-bottom: #83B4FF 2px solid;
+}
+
+.header-edit, .header-delete, .song-edit, .song-delete{
+    justify-self: center;
+}
+
+.form-button {
+    padding: 10px;
+}
+
+.edit-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.song-edit a{
+    text-decoration: none;
+    color: white;
+}
