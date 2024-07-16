@@ -1,12 +1,25 @@
-import React, { useEffect, useState } from "react";
-import SearchBar from "../components/SearchBar";
-import CardList from "../components/CardList";
-import Nav from "../components/Nav";
-import "./styles/Albums.css";
+import React, { useState, useEffect } from "react";
+import AdminNav from "../components/AdminNav";
+import CardList from "../../components/CardList";
+import SearchBar from "../../components/SearchBar";
+import { getData } from "../../services/ApiService";
 
-const Albums = ({ data }) => {
+const AdminAlbums = () => {
+  const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(data);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const result = await getData();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const handleFiltering = () => {
@@ -37,7 +50,7 @@ const Albums = ({ data }) => {
 
   return (
     <div className="albums">
-      <Nav />
+      <AdminNav />
       <SearchBar placeholder={"album"} onSearch={setSearchTerm} />
       <div className="header">
         <h2 className="header-title">Albums</h2>
@@ -51,4 +64,4 @@ const Albums = ({ data }) => {
   );
 };
 
-export default Albums;
+export default AdminAlbums;

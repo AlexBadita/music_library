@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArtistAlbum } from "../services/ApiService";
 import "./styles/AlbumDetails.css";
 import SongItem from "../components/SongItem";
+import Nav from "../components/Nav";
 
 const AlbumDetails = () => {
   const { id } = useParams();
@@ -28,6 +29,7 @@ const AlbumDetails = () => {
 
   return (
     <div className="album-details">
+      <Nav />
       <div className="album-header">
         <img
           src={"https://placehold.co/400"}

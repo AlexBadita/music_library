@@ -3,7 +3,6 @@ import "./styles/CardList.css";
 import Card from "./Card";
 
 const CardList = ({ artists }) => {
-  console.log(artists);
   return (
     <div className="card-list">
       {artists.map((artist) =>

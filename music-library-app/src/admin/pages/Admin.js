@@ -1,17 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import SearchBar from "../components/SearchBar";
-import Nav from "../components/Nav";
-import "./styles/Home.css";
+import AdminNav from "../components/AdminNav";
+import SearchBar from "../../components/SearchBar";
+import { getData } from "../../services/ApiService";
+import "./styles/Admin.css";
 
-const Home = ({ data }) => {
-  const navigate = useNavigate();
+const Admin = () => {
+  const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(data);
 
-  const handleSongClick = (artistId, albumIndex) => {
-    navigate(`/album/${artistId}-${albumIndex}`);
-  };
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const result = await getData();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const handleFiltering = () => {
@@ -60,8 +68,8 @@ const Home = ({ data }) => {
   }, [searchTerm, data]);
 
   return (
-    <div className="home">
-      <Nav />
+    <div className="admin-home">
+      <AdminNav />
       <SearchBar
         placeholder={"album, artist or song"}
         onSearch={setSearchTerm}
@@ -79,7 +87,6 @@ const Home = ({ data }) => {
               <div
                 className="songs-item"
                 key={`${artist.id}-${albumIndex}-${songIndex}`}
-                onClick={() => handleSongClick(artist.id, albumIndex)}
               >
                 <p>{artist.name}</p>
                 <p>{album.title}</p>
@@ -96,4 +103,4 @@ const Home = ({ data }) => {
   );
 };
 
-export default Home;
+export default Admin;

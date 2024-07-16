@@ -1,0 +1,30 @@
+.admin-home {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.songs-header,
+.songs-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 0.5fr;
+    padding: 5px;
+}
+
+.songs-header {
+    font-weight: bold;
+    border-bottom: #5A72A0 2px solid;
+}
+
+.songs-length {
+    justify-self: center;
+}
+
+.songs-item:hover {
+    background-color: #5A72A0;
+}
+
+.no-result {
+    margin-top: 10px;
+}

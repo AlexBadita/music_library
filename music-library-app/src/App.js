@@ -4,9 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import { getData } from "./services/ApiService";
 import Home from "./pages/Home";
 import AlbumDetails from "./pages/AlbumDetails";
-import Nav from "./components/Nav";
-import Admin from "./pages/Admin";
+import Admin from "./admin/pages/Admin";
 import Albums from "./pages/Albums";
+import AdminArtists from "./admin/pages/AdminArtists";
+import AdminAlbums from "./admin/pages/AdminAlbums";
 
 function App() {
   const [data, setData] = useState([]);
@@ -25,13 +26,13 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/albums" element={<Albums data={data} />} />
         <Route path="/album/:id" element={<AlbumDetails />} />
-        {/* <Route path="/artists" element={Artists} */}
         <Route path="/admin" element={<Admin />} />
+        <Route path="/admin/artists" element={<AdminArtists />} />
+        <Route path="/admin/albums" element={<AdminAlbums />} />
       </Routes>
     </div>
   );

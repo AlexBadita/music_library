@@ -1,0 +1,46 @@
+.add-form{
+    color: white;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-name {
+    margin: 0 10px;
+    width: 5vh;
+}
+
+.item-value, .form-item button {
+    padding: 5px;
+    width: 20vh;
+}
+
+.artists-header, .artists-item {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.artists-header {
+    font-weight: bold;
+    border-bottom: #5A72A0 2px solid;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-button {
+    padding: 5px;
+    color: #fff;
+    background-color: #000;
+}
+
+.form-button:hover {
+    background-color: #5A72A0;
+}
