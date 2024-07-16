@@ -4,6 +4,7 @@ import { getArtistAlbum } from "../services/ApiService";
 import "./styles/AlbumDetails.css";
 import SongItem from "../components/SongItem";
 import Nav from "../components/Nav";
+import placeholder from "../assets/placeholder.png";
 
 const AlbumDetails = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const AlbumDetails = () => {
       <Nav />
       <div className="album-header">
         <img
-          src={"https://placehold.co/400"}
+          src={placeholder}
           alt={`${album.title} cover`}
           className="album-image"
         />
@@ -49,7 +50,12 @@ const AlbumDetails = () => {
         <p className="header-length">Length</p>
       </div>
       {album.songs.map((song, index) => (
-        <SongItem index={index} name={song.title} length={song.length} />
+        <SongItem
+          key={index}
+          index={index}
+          name={song.title}
+          length={song.length}
+        />
       ))}
     </div>
   );

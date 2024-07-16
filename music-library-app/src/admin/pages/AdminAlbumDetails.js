@@ -4,6 +4,7 @@ import AdminNav from "../components/AdminNav";
 import { getArtistAlbum } from "../../services/ApiService";
 import { addSong, deleteSong, editSong } from "../../services/ApiService";
 import "./styles/AdminAlbumDetails.css";
+import placeholder from "../../assets/placeholder.png";
 
 const AdminAlbumDetails = () => {
   const { id } = useParams();
@@ -89,7 +90,7 @@ const AdminAlbumDetails = () => {
       <AdminNav />
       <div className="album-header">
         <img
-          src={"https://placehold.co/400"}
+          src={placeholder}
           alt={`${album.title} cover`}
           className="album-image"
         />
@@ -121,10 +122,10 @@ const AdminAlbumDetails = () => {
           Add Song
         </button>
       </form>
-      <div className="album-songs-header">
+      <div className="admin-album-songs-header">
         <p>#</p>
-        <p className="header-title">Title</p>
-        <p className="header-length">Length</p>
+        <p className="admin-header-title">Title</p>
+        <p className="admin-header-length">Length</p>
         <p className="header-edit">Edit</p>
         <p className="header-delete">Delete</p>
       </div>
@@ -154,7 +155,7 @@ const AdminAlbumDetails = () => {
             </p>
           </form>
         ) : (
-          <div className="song" key={index}>
+          <div className="admin-song" key={index}>
             <p className="song-index">{index + 1}</p>
             <p className="song-title">{song.title}</p>
             <p className="song-length">{song.length}</p>
