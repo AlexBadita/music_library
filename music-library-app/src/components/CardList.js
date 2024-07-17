@@ -10,7 +10,6 @@ const CardList = ({ artists, isAdmin, onDelete }) => {
           <Card
             key={`${artist.id}-${index}`}
             id={`${artist.id}-${index}`}
-            image={"https://placehold.co/400"}
             albumName={album.title}
             artistName={artist.name}
             isAdmin={isAdmin}
