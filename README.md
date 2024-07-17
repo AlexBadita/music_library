@@ -1,5 +1,16 @@
 # music_library
 
+This application is made using React, .NET Core and MongoDB.
+
+Each document in the collection represents an artist and contains the following fields:
+- `name`: The name of the artist (string).
+- `albums`: An array of album objects. Each album object contains:
+  - `title`: The title of the album (string).
+  - `songs`: An array of song objects. Each song object contains:
+    - `title`: The title of the song (string).
+    - `length`: The length of the song (string).
+  - `description`: A detailed description of the album (string).
+
 ## Installation
 
 ### Clone this repository
